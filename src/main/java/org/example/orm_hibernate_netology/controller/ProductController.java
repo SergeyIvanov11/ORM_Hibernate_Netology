@@ -20,8 +20,8 @@ public class ProductController {
     }
 
     @GetMapping("/fetch-product")
-    public ResponseEntity<List<String>> getProductName(@RequestParam("name") String name) {
-        return ResponseEntity.ok(service.getProductName(name));
+    public List getProductName(@RequestParam("name") String name) {
+        return service.getProductName(name);
     }
 
 }

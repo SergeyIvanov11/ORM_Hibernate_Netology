@@ -14,7 +14,7 @@ public class PersonService {
         this.repository = repository;
     }
 
-    public List<Person> getPersonsByCity(String city) {
+    public List getPersonsByCity(String city) {
         return repository.getPersonsByCity(city);
     }
 }

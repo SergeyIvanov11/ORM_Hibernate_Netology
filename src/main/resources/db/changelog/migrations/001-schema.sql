@@ -6,10 +6,6 @@ CREATE TABLE if not exists public.PERSONS (
   city_of_living TEXT NOT NULL,
   PRIMARY KEY (name, surname, age)
 );
-INSERT INTO public.PERSONS VALUES ('Sergey', 'Petrov', 30, '89771234567', 'MOSCOW');
-INSERT INTO public.PERSONS VALUES ('Igor', 'Ivanov', 25, '89771234568', 'ST PETERBURG');
-INSERT INTO public.PERSONS VALUES ('Vasya', 'Sidorov', 33, '89771234569', 'MOSCOW');
-INSERT INTO public.PERSONS VALUES ('Sveta', 'Kats', 28, '89771234570', 'PODOLSK');
 
 CREATE TABLE if not exists public.CUSTOMERS
 (

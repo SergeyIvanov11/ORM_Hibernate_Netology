@@ -1,8 +1,6 @@
 package org.example.orm_hibernate_netology.controller;
 
-import org.example.orm_hibernate_netology.dao.Person;
 import org.example.orm_hibernate_netology.service.PersonService;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,8 +19,8 @@ public class PersonController {
     }
 
     @GetMapping("/by-city")
-    public ResponseEntity<List<Person>> getPersonsByCity(@RequestParam("city") String city) {
-        return ResponseEntity.ok(service.getPersonsByCity(city));
+    public List getPersonsByCity(@RequestParam("city") String city) {
+        return service.getPersonsByCity(city);
     }
 
 }

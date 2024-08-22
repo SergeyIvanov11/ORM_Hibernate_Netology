@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class OrmHibernateNetologyApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(OrmHibernateNetologyApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(OrmHibernateNetologyApplication.class, args);
+    }
 }
