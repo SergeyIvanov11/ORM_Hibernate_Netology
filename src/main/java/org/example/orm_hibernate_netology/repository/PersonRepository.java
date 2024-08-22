@@ -14,7 +14,7 @@ public class PersonRepository {
 
     public List getPersonsByCity(@Param("city") String city) {
         return entityManager.createQuery(
-                        "SELECT p FROM Person p WHERE lower(p.city_of_living) = lower(:city)")
+                        "SELECT p FROM Person p WHERE lower(p.cityOfLiving) = lower(:city)")
                 .setParameter("city", city)
                 .getResultList();
     }

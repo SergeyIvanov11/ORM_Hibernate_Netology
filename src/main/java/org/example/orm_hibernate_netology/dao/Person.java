@@ -24,7 +24,7 @@ public class Person {
     @Column(name = "age")
     private int age;
     @Column(name = "phone_number", length = 20)
-    private String phone_number;
+    private String phoneNumber;
     @Column(name = "city_of_living", length = 20)
-    private String city_of_living;
+    private String cityOfLiving;
 }

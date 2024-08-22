@@ -19,32 +19,32 @@ public class AppRunner implements CommandLineRunner {
                 .name("Sergey")
                 .surname("Petrov")
                 .age(30)
-                .phone_number("89771234567")
-                .city_of_living("MOSCOW")
+                .phoneNumber("89771234567")
+                .cityOfLiving("MOSCOW")
                 .build();
 
         Person Igor = Person.builder()
                 .name("Igor")
                 .surname("Ivanov")
                 .age(25)
-                .phone_number("89771234568")
-                .city_of_living("ST PETERBURG")
+                .phoneNumber("89771234568")
+                .cityOfLiving("ST PETERBURG")
                 .build();
 
         Person Vasya = Person.builder()
                 .name("Vasya")
                 .surname("Sidorov")
                 .age(33)
-                .phone_number("89771234569")
-                .city_of_living("MOSCOW")
+                .phoneNumber("89771234569")
+                .cityOfLiving("MOSCOW")
                 .build();
 
         Person Sveta = Person.builder()
                 .name("Sveta")
                 .surname("Kats")
                 .age(28)
-                .phone_number("89771234570")
-                .city_of_living("PODOLSK")
+                .phoneNumber("89771234570")
+                .cityOfLiving("PODOLSK")
                 .build();
 
         entityManager.persist(Sergey);

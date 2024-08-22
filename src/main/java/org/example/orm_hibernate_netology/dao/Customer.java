@@ -24,5 +24,5 @@ public class Customer {
     @Column(name = "age", nullable = false)
     private int age;
     @Column(name = "phone_number", length = 10)
-    private String phone_number;
+    private String phoneNumber;
 }

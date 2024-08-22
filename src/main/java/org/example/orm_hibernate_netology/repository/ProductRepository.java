@@ -14,9 +14,8 @@ public class ProductRepository {
 
     public List getProductName(@Param("name") String name){
         return entityManager.createQuery(
-                        "SELECT o.product_name FROM Order o JOIN Customer c ON o.customer = c WHERE lower(c.name) = lower(:name)")
+                        "SELECT o.productName FROM Order o JOIN Customer c ON o.customer = c WHERE lower(c.name) = lower(:name)")
                 .setParameter("name", name)
                 .getResultList();
-
     }
 }
