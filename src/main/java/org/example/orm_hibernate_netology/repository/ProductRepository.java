@@ -10,6 +10,6 @@ import java.util.List;
 
 @Repository
 public interface ProductRepository extends CrudRepository<Order, Long> {
-    @Query("SELECT o.product_name FROM Order o JOIN Customer c ON o.customer = c WHERE lower(c.name) = lower(:name)")
+    @Query("SELECT o.productName FROM Order o JOIN Customer c ON o.customer = c WHERE lower(c.name) = lower(:name)")
     List<String> getProductName(@Param("name") String name);
 }
