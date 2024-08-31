@@ -23,6 +23,10 @@ public class PersonService {
         return repository.findByAgeLessThanOrderByAgeAsc(age);
     }
 
+    public Optional<Person> findByPhoneNumber(String phoneNumber) {
+        return repository.findByPhoneNumber(phoneNumber);
+    }
+
     public Optional<Person> findByNameAndSurname(String name, String surname) {
         return repository.findByNameAndSurname(name, surname);
     }

@@ -27,8 +27,9 @@ public class SecurityConfiguration {
                 .csrf(AbstractHttpConfigurer::disable)
                 .formLogin(Customizer.withDefaults())
                 .authorizeHttpRequests((request) -> request
-                        .requestMatchers("/person/**").hasRole("User")
-                        .requestMatchers("/products/**").hasRole("Admin")
+                        .requestMatchers("/person/**").hasRole("READ")
+                        .requestMatchers("/person/**").hasRole("WRITE")
+                        .requestMatchers("/person/**").hasRole("DELETE")
                         .anyRequest().authenticated())
                 .httpBasic(Customizer.withDefaults());
         return httpSecurity.build();
@@ -39,13 +40,17 @@ public class SecurityConfiguration {
     public UserDetailsService userDetailsService() {
         InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
 
-        manager.createUser(User.withUsername("user")
-                .password(encoder().encode("user"))
-                .roles("User")
+        manager.createUser(User.withUsername("reader")
+                .password(encoder().encode("reader"))
+                .roles("READ")
                 .build());
-        manager.createUser(User.withUsername("admin")
+        manager.createUser(User.withUsername("writer")
+                .password(encoder().encode("writer"))
+                .roles("WRITE")
+                .build());
+        manager.createUser(User.withUsername("Sergey")
                 .password(encoder().encode("admin"))
-                .roles("Admin")
+                .roles("DELETE")
                 .build());
         return manager;
     }

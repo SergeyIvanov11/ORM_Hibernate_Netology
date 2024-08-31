@@ -17,6 +17,9 @@ public interface PersonRepository extends CrudRepository<Person, Long> {
     @Query("SELECT p FROM Person p WHERE p.age < :age ORDER BY p.age asc")
     List<Person> findByAgeLessThanOrderByAgeAsc(@Param("age") int age);
 
+    @Query("SELECT p FROM Person p WHERE p.phoneNumber = :phoneNumber")
+    Optional<Person> findByPhoneNumber(@Param("phoneNumber") String phoneNumber);
+
     @Query("SELECT p FROM Person p WHERE p.name = :name AND p.surname = :surname")
     Optional<Person> findByNameAndSurname(@Param("name") String name, @Param("surname") String surname);
 }
